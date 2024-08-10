@@ -1,4 +1,7 @@
 def calculate_discount(price, customer_type):
+    if price < 0:
+        raise ValueError("Price cannot be negative")
+    
     if customer_type == "regular":
         discount = 0.05  # Regular customers get a 5% discount
     elif customer_type == "premium":
